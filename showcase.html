@@ -388,7 +388,8 @@
                 description: "Practice job interviews out loud in 12 fields. You get follow-up questions, a work simulation and a score out of 10 with a better answer for every reply.",
                 url: "https://interview-ready-blond.vercel.app/?from=showcase",
                 linkText: "Try it ▶",
-                video: "videos/interviewready-ad.mp4"
+                video: "videos/interviewready-ad.mp4",
+                poster: "videos/interviewready-poster.webp"
             }
         ];
 
@@ -403,6 +404,7 @@
             if (p.video) {
                 const video = document.createElement("video");
                 video.src = p.video;
+                if (p.poster) video.poster = p.poster;   // picture shown before play
                 video.controls = true;
                 video.preload = "metadata";
                 video.playsInline = true;
